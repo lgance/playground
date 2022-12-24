@@ -1,6 +1,7 @@
 
 import Header  from "./Header"
 import Content from "./Content"
+import Footer from "./Footer"
 
 export default function Layout({children}:any){
   return (
@@ -10,19 +11,18 @@ export default function Layout({children}:any){
       <Content>
           {children}
       </Content>
+      <Footer />
     </div>
 
     <style jsx global>{`
       .app {
         display:block;
         height:100%;
-        overflow:hidden;
+        overflow-y:auto;
         max-width:100%;
         outline:0;
         direction:ltr;
         position:relative;
-
-        background-color:red;
 
       }
     `}
